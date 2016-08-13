@@ -55,6 +55,7 @@ find_r_files <- function(path = NULL, pattern = NULL) {
   lib_pattern <- paste0('(^', lib_pattern, '.*)')
   lib_pattern <- paste(lib_pattern, collapse = '|')
   files <- files[!grepl(lib_pattern, files_normalized)]
+  files <- files[!grepl('win-library\\/[0-9]\\.[0-9]', files)]
 
   return(files)
 }
@@ -127,7 +128,9 @@ extract_direct_calls <- function(string) {
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' show_package_stats('../')
+#' }
 show_package_stats <- function(path = NULL, pattern = NULL) {
 
   found_packages <- scan_for_packages(find_r_files(path = path, pattern = pattern))
@@ -153,7 +156,9 @@ show_package_stats <- function(path = NULL, pattern = NULL) {
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' find_used_packages('dplyr', path = '../')
+#' }
 find_used_packages <- function(packages, path = NULL, pattern = NULL) {
 
   found_packages <- scan_for_packages(find_r_files(path = path, pattern = pattern))
@@ -175,7 +180,9 @@ find_used_packages <- function(packages, path = NULL, pattern = NULL) {
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' show_missing_packages('../')
+#' }
 show_missing_packages <- function(path = NULL, pattern = NULL, ...) {
   found_packages <- scan_for_packages(find_r_files(path = path, pattern = pattern))
   missing_packages <- missing_packages(found_packages$package, ...)
