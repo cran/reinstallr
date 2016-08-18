@@ -1,11 +1,11 @@
-3759b8c79c45ccceb203dcb7eff1c8f8 *DESCRIPTION
+e6f71f90283f75a8b19c9c19b399559c *DESCRIPTION
 9bbe30527abeaab2e9d381c23961a155 *NAMESPACE
-6e07fe2a08ea3ae22976e73656b8d914 *R/reinstallr.R
+61ecf3a5861fe3b65d4634905f6be8f9 *R/reinstallr.R
 35e31301190604b06e3e624b2d831198 *man/find_used_packages.Rd
 01e5bff50a507def3495eea1bd561cec *man/reinstallr.Rd
 94f4653254025316c59828bbabde990c *man/show_missing_packages.Rd
 a62b50d7fc6c27ae891c3777a018d100 *man/show_package_stats.Rd
 4c8b49f8284f64d4793dbc3f6469557f *tests/testthat.R
-1d1870ef0893e9b3d29568dc1a0ae57c *tests/testthat/test_01_show_package_stats.R
+40e49ce9d2b098d3b88fdebbb2891bb0 *tests/testthat/test_01_show_package_stats.R
 1758cbf72180031dcab449c37c03953b *tests/testthat/test_02_find_used_packages.R
 461ffd805c2a0964b4f5a97a64d234af *tests/testthat/test_03_show_missing_packages.R
